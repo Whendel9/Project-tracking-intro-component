@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a7707157f1.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Project tracking intro component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+
+  <div class="main">
+    <!-- Header -->
+    <header class="container header">
+      <img src="images/logo.svg" alt="" class="logo">
+
+      <div class="menu-mobile">
+        <button onclick="myFunction()"><i class="fas fa-bars fa-2x"></i></button>
+      </div>
+      <nav class="nav-mobile" id="myDropdown">
+          <ul>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li class="login"><a href="#">Login</a></li>
+            </ul>
+      </nav>
+      <nav class="menu">
+          <ul>
+              <li><a href="#">Product</a></li>
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><img src="images/round.svg" alt=""></li>
+              <li><a href="#">Login</a></li>
+            </ul>
+      </nav>
+    </header><!-- F.Header -->
+
+    <!-- Intro -->
+    <div class="container-intro">
+      <div class="intro-img">
+        <img src="images/illustration-devices.svg" alt="">
+      </div>
+      <div class="container intro-txt">
+        <h3>
+          <span class="new">New</span>
+          <span class="dashboard">Monograph Dashboard</span>
+        </h3>
+
+        <h1>Powerful insights into your team</h1>
+        <p>Project planning and time tracking<br> for agile teams</p>
+
+        <div class="intro-action">
+          <button>Schedule a demo</button>
+          <p>to see a live preview</p>
+        </div>
+      </div>
+    </div><!-- F.Intro -->
+
+
+
+  </div>
+
+
+   <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/Whendel9">Whendel Morais</a>.
+    </p>
+  </footer>
+
+ 
+</body>
+</html>
