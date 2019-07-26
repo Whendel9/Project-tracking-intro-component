@@ -1,217 +1,243 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed:400,700,800&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
+    text-decoration: none;
+    list-style: none;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Barlow&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap');
-:root {
-
-/*Primary*/
-
---Red: hsl(0, 100%, 68%);
-
- /*Neutral*/
-
---Very-Dark-Blue: hsl(230, 29%, 20%);
---Dark-Grayish-Blue: hsl(230, 11%, 40%);
---Grayish-Blue: hsl(231, 7%, 65%);
---Light-Grayish-Blue: hsl(207, 33%, 95%);
-
+:root{
+    --Red: hsl(0, 100%, 68%);
+    --Very-Dark-Blue: hsl(230, 29%, 20%);
+    --Dark-Grayish-Blue: hsl(230, 11%, 40%);
+    --Grayish-Blue: hsl(231, 7%, 65%);
+    --Light-Grayish-Blue: hsl(207, 33%, 95%);
 }
 
-/* Primary css(Mobie First) */
-
-body {
-    font-family: 'Barlow', sans-serif;
-    width: 100%;
+body{
     height: 100%;
+    width: 100%;
+    font-size: 18px;
+    font-family: 'Barlow',sans-serif;
     font-weight: 400;
 }
 
-.container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 30px 0;
-}
+/*  Header Mobile Style */
 
 .header {
+    width: 87%;
+    margin: 0 auto;
+    font-family: 'Barlow Condensed',sans-serif;
+    font-weight: 700;
+    color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: relative;
+    padding: 50px 0;
 }
 
-.menu {
+.button-menu {
+    cursor: pointer;
+    display: block;
+}
+
+.menu-desktop{
     display: none;
 }
 
-.menu li img {
-    width: 10px;
-    opacity: 0.5;
+.show {
+    display: none;
 }
 
-
-.nav-mobile ul li ,a{
-    text-decoration: none;
-    list-style: none;
-}
-
-.nav-mobile {
+.menu-mobile {
     position: absolute;
-    top: 100%;
     text-align: center;
     width: 100%;
+    top: 100%;
     background-color: white;
-    border-radius: 2px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
-    display: none;
-}
-
-.nav-mobile ul li {
-    padding: 20px 0;
-    width: 80%;
-    margin: 0 auto;
-}
-
-.nav-mobile ul li a {
-    color: var(--Very-Dark-Blue);
-    font-size: 20px;
-    text-transform: uppercase;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 900;
-}
-
-.login {
-    border-top: 1px solid rgba(0, 0, 0, 0.3);
-}
-
-.login a {
-    color: var(--Dark-Grayish-Blue) !important;
-}
-.menu-mobile button{
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
-}
-
-.menu ul{
-    display: flex;
-    font-family: 'Barlow Condensed', sans-serif;
-    font-weight: 700;
-    text-transform: uppercase;
-    
-}
-
-.menu ul li {
-    list-style: none;
-    margin-left: 20px;
-    padding: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
     border-radius: 5px;
 }
 
-.menu ul li a {
-    text-decoration: none;
+.menu-mobile ul li{
+    padding: 10px;
+    margin: 5px auto;
+}
+
+.menu-mobile ul li a {
+    text-transform: uppercase;
+    color: var(--Very-Dark-Blue);
+    font-weight: 800;
+    font-family: 'Barlow Condensed',sans-serif;
+}
+
+.menu-mobile ul li:last-child a {
     color: var(--Dark-Grayish-Blue);
-    font-weight: 700;
-    font-size: 1.2em;
 }
 
-.container-intro {
+.menu-mobile ul li:last-child::before{
+    content: '';
+    display: block;
+    width: 80%;
+    height: 2px;
+    background: #ccc;
+    margin: 0 auto 10px auto;
+}
+
+.vtr {
+    width: 50%;
+    height: 100%;
+    background:var(--Light-Grayish-Blue);
+    position: absolute;
+    right: 0;
+    border-bottom-left-radius: 50px;
+    z-index: -2;
+}
+
+/*  Finished Header Style  */
+
+
+/* Intro Mobile Style */
+
+.intro {
     display: grid;
-    justify-content: center;
     grid-template-columns: 1fr;
-    grid-gap: 20px;
-}
-
-.intro-img img{
-    max-width: 100%;
+    grid-gap: 80px;
 }
 
 .intro-txt {
     display: grid;
-    grid-gap: 30px;
+    grid-gap: 15px;
+    width: 87%;
+    margin: 0 auto;
 }
 
-.intro-txt h3{
+.intro-txt h2 span {
+    font-size: 18px;
     text-transform: uppercase;
+    text-align: center;
+    font-family: 'Barlow Condensed',sans-serif;
+}
+
+.intro-txt h2 span:last-child {
+    color: var(--Grayish-Blue);
     font-weight: 400;
-    font-family: 'Barlow Condensed', sans-serif;
+    letter-spacing: 4px;
+    margin-left: 20px;
 }
 
-.new {
-    color: var(--Light-Grayish-Blue);
+.intro-txt h2 span:first-child {
+    color: white;
     background-color: black;
-    padding: 5px 10px;
-    border-radius: 20px;
-    font-size: 1em;
-    font-weight: 700;
- 
-}
-
-.dashboard {
-    letter-spacing: 0.2em;
-    color: var(--Dark-Grayish-Blue);
-    margin-left: 5px; 
-    font-size: 0.8em;
-    font-weight: 700;
+    padding: 4px 15px;
+    border-radius: 30px;
 }
 
 .intro-txt h1 {
+    font-weight: 800 ;
     text-transform: uppercase;
-    font-weight: 700;
-    font-size: 3em;
-    font-weight: bold;
-    font-family: 'Barlow Condensed', sans-serif;
-}
-
-.intro-txt p {
-    color: var(--Grayish-Blue);
+    font-family: 'Barlow Condensed',sans-serif;
+    font-size: 40px;
 }
 
 .intro-txt > p {
-    font-size: 1.2em;
-    color: var(--Dark-Grayish-Blue)
-} 
+    color: var(--Dark-Grayish-Blue);
+}
 
-.intro-action {
+.intro-txt div {
     display: flex;
     align-items: center;
-    font-family: 'Barlow Condensed', sans-serif;
+    margin: 20px 0 30px 0;
 }
 
-.intro-action button{
-    text-transform: uppercase;
-    padding: 10px 20px;
+.intro-txt div button {
+    padding: 0.6rem 1rem;
     border: none;
-    border-radius: 5px;
-    color: var(--Light-Grayish-Blue);
+    font-size: 18px;
     background-color: var(--Red);
-    font-weight: 300;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.intro-action p {
-    margin-left: 15px;
+    border-radius: 5px;
+    color: white;
     text-transform: uppercase;
-    font-size: 0.9em;
-    font-weight: 300;
+    font-family: 'Barlow Condensed',sans-serif;
 }
 
-.show {
-    display: block;
+.intro-txt div p {
+    color: var(--Grayish-Blue);
+    margin-left: 10px;
+    font-family: 'Barlow Condensed',sans-serif;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 2px;
 }
+
+footer {
+    padding: 30px;
+}
+/*  Finished Intro Style */
+
+/* Css Style Desktop */
 
 @media screen and (min-width: 700px){
-    .menu {
+    .button-menu , .menu-mobile{
+        display: none;
+    }
+
+    .menu-desktop {
+        display: block;
+    }
+
+    .menu-desktop ul {
         display: flex;
     }
 
-    .menu-mobile button{
-        display: none;
+    .menu-desktop ul li {
+        margin-left: 10px;
+        padding: 0.6rem;
+        border-radius: 5px;
+    }
+
+    .menu-desktop ul li:last-child a {
+        color: var(--Grayish-Blue);
+    }
+
+    .menu-desktop ul li:last-child a::before{
+        content: '';
+        width: 10px;
+        height: 10px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin-bottom: 1px;
+        margin-right: 25px;
+    }
+
+    .menu-desktop ul li:hover {
+        background-color: rgba(45, 45, 45, 0.1);
+        transition: 1s;
+    }
+
+    .menu-desktop ul li a {
+        font-family: 'Barlow Condensed',sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: black;
+    }
+
+    .vtr {
+        height: 65%;
+    }
+
+    .intro {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 'intro-txt intro-img';
+        margin-top: 40px;
+        justify-content: center; 
     }
 
     .intro-img {
@@ -220,59 +246,7 @@ body {
 
     .intro-txt {
         grid-area: intro-txt;
-    }
-
-    .header {
-        width: 85%;
-    }
-
-    .intro-txt {
-        width: 70%;
-    }
-    
-    .container-intro {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: 'intro-txt intro-img';
-        justify-content: center;
-    }
-
-    .menu a {
-        padding: 10px;
-        border-radius: 5px;  
-    }
-
-    .menu a:hover {
-        background-color: rgba(0, 0, 0, 0.1);
-        transition: 0.5s;
-    }
-
-    .show {
-        display: none !important;
+        padding-left: 30px;
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

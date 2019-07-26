@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  <link href="https://fonts.googleapis.com/css?family=Barlow+Condensed&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/a7707157f1.js"></script>
   <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a7707157f1.js"></script>
   <script src="main.js"></script>
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
@@ -14,72 +12,66 @@
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
+    .attribution { font-size: 14px; text-align: center; font-style: italic; font-weight: 600; }
     .attribution a { color: hsl(228, 45%, 44%); }
   </style>
 </head>
 <body>
 
-  <div class="main">
-    <!-- Header -->
-    <header class="container header">
-      <img src="images/logo.svg" alt="" class="logo">
+  <div class="vtr"></div>
 
-      <div class="menu-mobile">
-        <button onclick="myFunction()"><i class="fas fa-bars fa-2x"></i></button>
-      </div>
-      <nav class="nav-mobile" id="myDropdown">
-          <ul>
-              <li><a href="#">Product</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li class="login"><a href="#">Login</a></li>
-            </ul>
+  <header class="header">
+
+    <img src="images/logo.svg" alt="Logo">
+    
+    <a class="button-menu" onclick="myFunction()"><i class="fas fa-bars fa-2x"></i></a>
+
+    <nav id="Dropdown" class="show menu-mobile">
+      <ul>
+        <li><a href="#">Product</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Pricing</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+    </nav>
+
+    <nav class="menu-desktop">
+        <ul>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Login</a></li>
+        </ul>
       </nav>
-      <nav class="menu">
-          <ul>
-              <li><a href="#">Product</a></li>
-              <li><a href="#">Features</a></li>
-              <li><a href="#">Pricing</a></li>
-              <li><img src="images/round.svg" alt=""></li>
-              <li><a href="#">Login</a></li>
-            </ul>
-      </nav>
-    </header><!-- F.Header -->
 
-    <!-- Intro -->
-    <div class="container-intro">
-      <div class="intro-img">
-        <img src="images/illustration-devices.svg" alt="">
+  </header>
+
+  <div class="intro">
+
+    <section class="intro-img">
+      <img src="images/illustration-devices.svg">
+    </section>
+
+    <section class="intro-txt">
+      <h2><span>New</span><span>Monograph Dashboard</span></h2>
+
+      <h1>Powerful insights into your team</h1>
+      <p>Project planning and time tracking for agile teams</p>
+
+      <div>
+        <button>Schedule a demo</button>
+        <p>to see a live preview</p>
       </div>
-      <div class="container intro-txt">
-        <h3>
-          <span class="new">New</span>
-          <span class="dashboard">Monograph Dashboard</span>
-        </h3>
 
-        <h1>Powerful insights into your team</h1>
-        <p>Project planning and time tracking<br> for agile teams</p>
-
-        <div class="intro-action">
-          <button>Schedule a demo</button>
-          <p>to see a live preview</p>
-        </div>
-      </div>
-    </div><!-- F.Intro -->
-
-
-
+    </section>
   </div>
-
-
-   <footer>
+  
+  
+  <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="https://github.com/Whendel9">Whendel Morais</a>.
+      Coded by <a href="#">Whendel Morais</a>.
     </p>
   </footer>
-
- 
 </body>
 </html>
